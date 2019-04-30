@@ -1,0 +1,126 @@
+body {
+	background-color:#505050;
+}
+.top {
+	background-color:#8F8F8F;
+	height:auto;
+	width:85%;
+	border-radius:5px;
+	margin:auto;
+	box-shadow:10px 10px 5px black;
+	margin-bottom:1%;
+}
+.left {
+	background-color:#8E8E8E;
+	height:auto;
+	width:7%;
+	border-radius:10px;
+	float:left;
+	margin-left:9%;
+	box-shadow: 10px 10px 5px black;
+}
+.center {
+	position: absolute;
+	background-color:#8E8E8E;
+	height:auto;
+	width:64%;
+	border-radius:10px;
+	display: inline-block;
+	float:left;
+	margin-left:2%;
+	box-shadow: 10px 10px 5px black;
+}
+.right {
+	background-color:#8E8E8E;
+	height:auto;
+	width:7%;
+	border-radius:10px;
+	float:right;
+	margin-right:9%;
+	box-shadow: 10px 10px 5px black;}
+.leftimg {
+	width:80%;
+	margin-left:10%;
+	margin-top:10%;
+}
+.rightimg {
+	width:60%;
+	margin-left:20%;
+	margin-top:10%;
+}
+#disney{
+	width:1.5%;
+	float:right;
+	margin-top:0.5%;
+	margin-right:0.5%;
+	margin-left:-1.5%;
+}
+#brick{
+	margin-left: auto;
+	margin-right: auto;
+	background-image:url("resources/brick.jpg");
+	height:60px;
+	width:85%;
+	margin-bottom:250%;
+}
+#close{
+	width:1.5%;
+	float:right;
+	margin-top:6.5%;
+}
+#cluster{
+	width:98%;
+	margin-left:1%;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+#oeil{
+	border: 6px solid red;
+	width: 65%;
+	border-radius: 5px;
+}
+.shadow{
+	text-shadow: 5px 5px 5px red;
+}
+.box{
+	position: relative;
+	background-color:#88ff89;
+	margin-top:33%;
+	margin-left:5%;
+	width:30%;
+	height:auto;
+	box-shadow: 10px 10px 5px black;
+	border-radius: 5px;
+}
+.line1{
+	margin-top: 0%;
+	margin-left: 1%;
+	font-size: 1em;
+	}
+.line2{
+	margin-left: 1%;
+	font-size: 0.9em;
+	font-style: italic;
+	font-family: sans-serif;
+}
+.entrez{
+	font-size: 2em;
+}
+.input{
+	margin-top: -2%;
+	margin-left: 1%;
+	width: 70%;
+	float:left;
+}
+.button{
+	margin-top: -2%;
+	margin-left: 1%;
+	float:left;
+	border:1px solid grey;
+}
+.ikea{
+	height: 500px;
+	width: 500px;
+	position: absolute;
+	margin-top: 50%;
+}
