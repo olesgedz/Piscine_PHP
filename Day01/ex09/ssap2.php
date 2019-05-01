@@ -66,9 +66,10 @@
 		if ($argc < 2)
 			return (0);
 		$tab = implode(" ", $argv);
-		$tab = preg_replace('/\s+/', ' ', $tab);
 		$tab = trim($tab);
 		$tab = explode(" ", $tab);
+		$tab =  array_filter($tab, function ($var){ 
+		return $var != ' ';});
 		array_shift($tab);
 		foreach ($tab as $elem) {
 			if (($elem[0] >= 'a' && $elem[0] <= 'z') || ($elem[0] >='A' && $elem[0] <= 'Z'))

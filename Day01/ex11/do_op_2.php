@@ -43,8 +43,10 @@
 			echo "Syntax Error\n";
 			return 0;
 		}
-
-		$str = preg_replace('/\s+/', '', $str);
+		$str = explode(" ", $str);
+		$str =  array_filter($str, function ($var){ 
+		return $var != ' ';});
+		$str = implode($str);
 		$needles = array("+", "-", "*", "/", "%");
 
 		foreach ($needles as $needle)
