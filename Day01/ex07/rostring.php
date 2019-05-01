@@ -1,13 +1,15 @@
 #!/usr/bin/php
 <?php
-	$str = implode(" ", $argv);							// add all element of array to string
-	$str = preg_replace('/\s+/', ' ', $str);
-	$str = trim($str);
-	$tab = explode(" ", $str);							// make array
- 	array_shift($tab);									// delete first elemt 
-	sort($tab);
-	foreach ($tab as $elem)
+
+	if ($argc > 1)
 	{
-		echo $elem."\n";
+		$argv[1] = trim($argv[1]);
+		$argv[1] = preg_replace('/\s+/', ' ', $argv[1]);
+		$tab = explode(" ", $argv[1]);
+		$first = array_shift($tab);
+		$tab = implode(" ", $tab);
+		if ($tab != NULL)
+			echo $tab." ";
+		echo $first."\n";
 	}
 ?>
