@@ -5,7 +5,7 @@
 		if ($argc < 2)
 			return (0);
 		$argv[1] = trim($argv[1]);
-		$argv[1] = preg_filter("/\s+/", " ", $argv[1]);
+		$argv[1] = preg_filter("/[\s,\t]+/", " ", $argv[1]);
 		echo $argv[1]."\n";
 	}
 
