@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-    if ($argc != 3)
+   if ($argc != 3)
         exit();
     if (!file_exists($argv[1]))
         exit();
