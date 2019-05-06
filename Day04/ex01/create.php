@@ -11,8 +11,6 @@
 		if ($_POST['login'] == NULL || $_POST['passwd'] == NULL || $_POST['submit'] != "OK")
 			die("ERROR\n");
 		$array_user['login'] = $_POST['login'];
-		if (hash(sha512, $_POST['passwd']))
-			die("ERROR\n");
 		$array_user['passwd'] = hash(sha512, $_POST['passwd']);
 		$file_passwd = "../private/passwd";
 		if (!file_exists("../private/"))
