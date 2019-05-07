@@ -1,1 +1,1 @@
-CREATE DATABASE db_jblack-b;
+CREATE DATABASE IF NOT EXISTS db_jblack_b; /*CREATE DATABASE db_jblack-b;*/
