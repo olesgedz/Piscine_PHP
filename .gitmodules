@@ -1,3 +1,7 @@
 [submodule "Piscine_PHP_Rush00"]
 	path = Piscine_PHP_Rush00
 	url = https://github.com/olesgedz/Piscine_PHP_Rush00.git
+[submodule "Day08"]
+	path = Day08
+	url = https://github.com/Teorell/Day08.git
+	branch = jblack-b
