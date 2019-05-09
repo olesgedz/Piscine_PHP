@@ -1,0 +1,14 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles vertices.
+
+An instance can be contructed from array of points :
+new Vertex( array( 'x' => 1, 'y' => 1, 'z' => 1 ) );
+
+array key exists 'w' -> homogeneous coordinates
+
+and a Color( array( 'red' => 255, 'green' => 255, 'blue' => 255 ) );
+
+The class provides the following methods :
+
+---------------------------------------------------------------------- Vertex ->
