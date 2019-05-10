@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+		<meta charset="utf-8">
+		<title>Ballon</title>
 <style>
 	#balloon
 	{
@@ -27,25 +29,27 @@
 			balloon.style.height = 200 + "px";
 		}
 		//console.log(balloon.style);
+		//console.log(ncolor);
 	}
 	function changeOut(width, height)
 	{	
 		var balloon = document.getElementById("balloon");
 		balloon.style.backgroundColor = colors[ncolor--];
 		if (ncolor < 0)
-			ncolor = 3;
+			ncolor = 2;
 		if (balloon.offsetHeight >= 205)
 		{
 			balloon.style.width = balloon.offsetWidth - 5 + "px";
 			balloon.style.height = balloon.offsetHeight - 5 + "px";
 		}
 		//console.log(balloon.style);
+		//console.log(ncolor);
 	}
 
 </script>
 </head>
 <body>
-	<div id="balloon" onclick="changeSize()" onmouseout="changeOut()">
+	<div id="balloon" onclick="changeSize()" onmouseleave="changeOut()">
 	</div>
 </body>
 </html>
