@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Calc</title>
+	<script>
+			function evalCalc(symb, nb1, nb2) {
+				if (symb == 0) {
+					res = nb1 + nb2;
+				}
+				else if (symb == 1) {
+					res = nb1 - nb2;
+				}
+				else if (symb == 2) {
+					res = nb1 * nb2;
+				}
+				else if (symb == 3) {
+					if (nb2 == 0)
+						res = "It's over 9000!";
+					else
+						res = nb1 / nb2;
+				}
+				else if (symb == 4) {
+					if (nb2 == 0)
+						res = "It's over 9000!";
+					else
+						res = nb1 % nb2;
+				}
+				return (res);
+			}
+			function Calc() {
+				var nb1 = parseInt(document.getElementById("first").value);
+				var nb2 = parseInt(document.getElementById("second").value);
+				if (nb1 < 0 || nb2 < 0 || !Number.isInteger(nb1) || !Number.isInteger(nb2)) {
+					alert("Error :(");
+					return;
+				}
+				var sign = document.getElementById("select");
+				var symb = sign.options[sign.selectedIndex].value;
+				alert(evalCalc(symb, nb1, nb2));
+				//console.log(res);
+				window.setInterval(function () {
+					alert("Please, use me...");
+				}, 30000);
+			}
+		</script>
+</head>
+
+<body>
+	<input id="first" action="Calc()" type=text name="first"></input>
+	<select id="select">
+		<option value="0">+</option>
+		<option value="1">-</option>
+		<option value="2">*</option>
+		<option value="3">/</option>
+		<option value="4">%</option>
+	</select>
+	<input id="second" type=text name="second"></input>
+	<input type="button" name="Try me!" value="Try me!" onclick="Calc();">
+</body>
+
+</html>
