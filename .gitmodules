@@ -5,3 +5,6 @@
 	path = Day08
 	url = https://github.com/Teorell/Day08.git
 	branch = jblack-b
+[submodule "Rush01"]
+	path = Rush01
+	url = https://github.com/DWhistle/Rush01.git
