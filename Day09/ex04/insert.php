@@ -1,7 +1,7 @@
 <?php
 	$array = array();
 	$max = 0;
-	if (file_exists("list.csv") && isset($_GET["todo"]) && !empty($_GET["todo"]))
+	if (file_exists("list.csv") && isset($_GET["todo"]) && !empty($_GET["todo"]) && $_GET["todo"])
 	{
 		$file = file("list.csv", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 		foreach ($file as $line) {

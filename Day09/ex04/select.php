@@ -7,4 +7,5 @@
 			$tmp = explode(";", $line);
 			$array[$tmp[0]] = $tmp[1];
 		}
+		echo json_encode($array);
 	}
