@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Ballon</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+	#balloon
+	{
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background-color:red;
+	}
+</style>
+<script>
+	var ncolor = 0;
+	var colors = ['red', 'green', 'blue'];
+	function changeSize(width, height)
+	{	
+		$('#balloon').css('background-color', colors[ncolor++]);
+		if (ncolor > 2)
+			ncolor = 0;
+		$('#balloon').css("width", "+=10");
+		$('#balloon').css("height", "+=10");
+		if ($('#balloon').height() > 420)
+		{
+			$('#balloon').css("width", "200");
+			$('#balloon').css("height", "200");
+		}
+		//console.log(balloon.style);
+		//console.log(ncolor);
+	}
+	function changeOut(width, height)
+	{	
+		$('#balloon').css('background-color', colors[ncolor--]);
+		if (ncolor < 0)
+			ncolor = 2;
+		if ($('#balloon').height() >= 205)
+		{
+			$('#balloon').css("width", "-=5");
+			$('#balloon').css("height", "-=5");
+		}
+		//console.log(balloon.style);
+		//console.log(ncolor);
+	}
+
+</script>
+</head>
+<body>
+	<div id="balloon" onclick="changeSize()" onmouseleave="changeOut()">
+	</div>
+</body>
+</html>
