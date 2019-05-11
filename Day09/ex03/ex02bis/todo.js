@@ -1,3 +1,6 @@
+
+//no idea of jQuery cookies
+
 window.onload = function() {
 
 	highestCookieValue = 0;
@@ -25,8 +28,8 @@ window.onload = function() {
 		list.insertBefore(newItem, list.childNodes[0]);
 	}
 
-	var newButton = document.getElementById("add_item");
-	newButton.addEventListener("click", function() {
+	var newButton = $("#add_item");
+	newButton.bind("click", function() {
 		console.log("they clicked the button");
 		var newTaskText = prompt("Enter the task name", "");
 		if (newTaskText) {
@@ -65,7 +68,7 @@ function setCookie(cname,cvalue,exdays) {
   }
   
   function checkCookie() {
-	var user=getCookie("username");
+	var user= getCookie("username");
 	if (user != "") {
 	  alert("Welcome again " + user);
 	} else {
@@ -76,14 +79,14 @@ function setCookie(cname,cvalue,exdays) {
 	}
 }
 function deleteAllCookies() {
-    var cookies = document.cookie.split(";");
+	var cookies = document.cookie.split(";");
 
-    for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";path=/";
-    }
+	for (var i = 0; i < cookies.length; i++) {
+		var cookie = cookies[i];
+		var eqPos = cookie.indexOf("=");
+		var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";path=/";
+	}
 }
 	//deleteAllCookies();
 	var cookieList = document.cookie.split(';');	
